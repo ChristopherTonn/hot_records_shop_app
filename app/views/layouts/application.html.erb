@@ -4,22 +4,58 @@
     <title>MyFirstApp</title>
     <%= csrf_meta_tags %>
 
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Custom Css -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Java Script -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-  <body><nav>
-  <ul>
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "About", simple_pages_about_path %></li>
-    <li><%= link_to "Contact", simple_pages_contact_path %></li>
-  </ul>
-</nav>
+  <body>
+
+    <!-- start Navbar -->
+    <nav class="navbar navbar-light navbar-fixed-top" role="navigation">
+
+
+      <div class="navbar-header" id="wholeNavigationBar">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="background-color: black; ">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button><!--end button -->
+
+        <a class="navbar-brand" href="#">
+          <img src="img/cf_logo_min_full_dark.svg" height="30" alt="">
+        </a>
+
+      </div> <!--end navbar-header -->
+
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar navbar-nav pull-right">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+      </div><!-- end nav -->
+    </nav><!-- end nav container -->
+  </div><!-- end Navbar -->
 
 <%= yield %>
 
-<footer>
-  &copy; 2018 Hot Records
+<footer class="footer">
+  <div>
+  <p>&copy; 2018 Hot Records</p>
+</div>
 </footer>
   </body>
 </html>
