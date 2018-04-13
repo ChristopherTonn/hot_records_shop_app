@@ -7,17 +7,12 @@
   <div class="row">
 
     <h1>Products</h1>
-     
+
 
     <% @products.each do |product| %>
 
-      <div class="col-sm-2 col-md-4 wrapper_product">
-        <div class="inner_product wrapper_product">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <a href="#"><h6><%= product.name %></h6></a>
-        <strong><%= product.price %> €</strong>
-      </div><!-- end inner_product -->
-      </div><!-- end product -->
+    <!-- render product from _product.html.erb  -->
+    <%= render product %>
 
     <% end %>
 

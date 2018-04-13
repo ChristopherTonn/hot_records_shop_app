@@ -11,10 +11,20 @@ h6{
   // padding: 0 5px 0 5px;
   margin: 2px 2px 2px 2px;
   padding: 45px;
-  background-color: lightgrey;
+  background-color: white;
+
+  border-width: .1px;
+  border-color: rgba(59,68,81,0.10);
+  border-style: solid;
+
+  transition-duration: 180ms;
+  transition-property: box-shadow;
+  transition-timing-function: ease-out;
+
 }
 
 .wrapper_product :hover{
   background-color: white;
   box-shadow: 0 2px 33px 4px rgba(59,68,81,0.15);
+  // transform: scaleY(4);
 }
