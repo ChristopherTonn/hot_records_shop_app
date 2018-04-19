@@ -10,6 +10,11 @@ class Product < ApplicationRecord
 
 
   def self.search(search_term)
-    Product.where("name LIKE ?", "%#{search_term}%")
+
+    # For the local
+    # Product.where("name LIKE ?", "%#{search_term}%")
+
+    # For the production
+    Product.where("name ilike ?", "%#{search_term}%")
   end
 end
