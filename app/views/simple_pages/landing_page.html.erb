@@ -1,8 +1,12 @@
 <h2>Welcome at Hot Records</h2>
 <p>This is the landing Page</p>
 
+<!-- Easter Eg  -->
+<%= params[:example_key].to_i * 10 %>
 
-
+<%= form_with(url: '/products', local: true) do |form| %>
+  Form contents
+<% end %>
 
 <!-- **** **** **** ****  -->
 <!--   Image carousel     -->

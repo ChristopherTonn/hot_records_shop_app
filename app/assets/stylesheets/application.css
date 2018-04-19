@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .search-field{
+   position: relative;
+   display: block;
+   width: 300px;
+ }
+
+.submit-search-btn{
+  position: relative;
+  float: right;
+}
+
+.roundish-style{
+  border-radius: 80px;
+  border-width: .5px;
+  border-color: black;
+
+  background-color: white;
+}
