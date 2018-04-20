@@ -32,3 +32,15 @@
 
   background-color: white;
 }
+
+.submit-mail-btn{
+  height: 40px;
+  width: 130px;
+}
+
+.thank-you-text{
+  color: green;
+  font-size: 15px;
+  font-family: Futura, Helvetica, sans-serif;
+  font-weight: lighter;
+}

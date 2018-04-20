@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get '/products', to: 'products#index'
 
+  post 'simple_pages/thank_you'
+
   root 'simple_pages#landing_page'
 
 
