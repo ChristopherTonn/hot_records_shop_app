@@ -13,16 +13,36 @@
  *= require_tree .
  *= require_self
  */
+/* .search-field
+.submit-search-btn{
+
+  display: flex;
+  align-items: center;
+} */
+
+.search-wrapper{
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+
+  font-family: Futura, Helvetica, Verdana sans-serif;
+}
 
  .search-field{
+
    position: relative;
-   display: block;
-   width: 300px;
+   margin-right: 5px;
+   height: 30px;
+   width: calc(100% - 65px);
  }
 
 .submit-search-btn{
   position: relative;
+  margin-right: 5px;
   float: right;
+  height: 30px;
+  width: 50px;
 }
 
 .roundish-style{
