@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<!-- start Welcome Alert -->
+<div class="alert-wrapper">
+  <% if notice %>
+    <p id="notice" class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p id="alert" class="alert alert-danger"><%= alert %></p>
+<% end %>
+</div>
 
 <h1>Users</h1>
 
