@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-sm-12 col-centered sign-up-card">
+
+    <h2 class="headline-sign-up">Log in</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="field container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 field-line">
+        <%= f.label :email, "Email:", class: "pull-left field-label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 field-line">
+        <%= f.label :password, "Password:", class: "pull-left field-label" %>
+        <%= f.password_field :password, autocomplete: "off", class: "field-input" %>
+      </div>
+    </div>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+  <div class="field container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 field-line">
+      <%= f.label :remember_me, class: "field-label" %>
+      <%= f.check_box :remember_me, class: "field-input" %>
+    </div>
+  </div>
+</div>
+<% end -%>
+
+<div class="actions">
+  <%= f.submit "Log in", class: "roundish-style sign-up-btn" %>
+</div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
