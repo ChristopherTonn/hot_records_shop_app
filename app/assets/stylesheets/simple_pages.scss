@@ -38,9 +38,45 @@ body{
   background-color: black;
 }
 
-btn{
+.btn{
   background-color: white;
 }
+
+/**** Carousel ****/
+.carousel{
+  height: 350px;
+  margin-top: -15px;
+}
+
+.carousel-control{
+
+}
+
+.carousel-control:hover{
+  background-color: rgba( 0, 0, 0, 0.0 );
+}
+
+.img-carousel{
+  height: 30px;
+  width: 300px;
+
+  margin-top: 25px;
+  margin-left: 190px;
+}
+
+.carousel-caption{
+  margin-bottom: 80px;
+  margin-left: 400px;
+
+  width: 20%;
+  background-color: black;
+
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 
 /**** Product ****/
 
