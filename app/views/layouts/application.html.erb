@@ -10,7 +10,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <!-- Java Script -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+
   <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -74,6 +74,13 @@
             </li>
           </ul>
           <ul class="nav navbar-nav pull-right">
+            <li>
+
+              <% if user_signed_in? %>
+                <%= link_to("My Account")%>
+              <% end %>
+            </li>
+
             <li>
               <% if user_signed_in? %>
               <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
