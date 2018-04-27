@@ -12,13 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.raty
  */
-/* .search-field
-.submit-search-btn{
 
-  display: flex;
-  align-items: center;
-} */
+
 
 .search-wrapper{
   display: flex;
