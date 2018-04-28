@@ -77,7 +77,10 @@
             <li>
 
               <% if user_signed_in? %>
-                <%= link_to("My Account") %>
+                <%= link_to "My Account", edit_user_registration_path %>
+                <!-- <%= link_to 'Edit user', "/users" %>
+
+                <%= link_to 'Edit password', edit_user_registration_path %> -->
               <% end %>
             </li>
 
