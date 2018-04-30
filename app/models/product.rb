@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
+
   has_many :orders
   has_many :comments
-
-
 
   def self.search(search_term)
     if Rails.env.production?
@@ -23,4 +23,7 @@ class Product < ApplicationRecord
   def average_rating
     comments.average(:rating).to_f
   end
+
+
+
 end

@@ -14,7 +14,9 @@
  *= require_self
  *= require jquery.raty
  */
-
+body{
+  margin-bottom: 55px;
+}
 
 
 .search-wrapper{
