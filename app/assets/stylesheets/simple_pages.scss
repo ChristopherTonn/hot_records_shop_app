@@ -48,24 +48,17 @@ body{
   margin-top: -15px;
 }
 
-.carousel-control{
-
-}
-
-.carousel-control:hover{
-  background-color: rgba( 0, 0, 0, 0.0 );
-}
 
 .img-carousel{
   height: 30px;
   width: 300px;
 
-  margin-top: 25px;
-  margin-left: 190px;
+  margin-top: 1.563em;
+  margin-left: 11.875em;
 }
 
 .carousel-caption{
-  margin-bottom: 80px;
+  margin-bottom: 5.000em;
   margin-left: 400px;
 
   width: 20%;
@@ -76,6 +69,8 @@ body{
   font-weight: bold;
   letter-spacing: 2px;
 }
+
+
 
 
 /**** Product ****/

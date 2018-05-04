@@ -1,7 +1,11 @@
 <div class="col-sm-12 col-md-4 wrapper_product">
-  <div class="inner_product wrapper_product">
-  <%= image_tag(product.image_url, class: "img-responsive") %>
-  <h6><%= link_to product.name, product %></h6>
-  <strong><%= product.price %> €</strong>
-</div><!-- end inner_product -->
+  <div class="inner_product ">
+    <div class="contetn-product-wrapper">
+      <div class="content-product">
+        <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
+        <h6><%= link_to product.name, product %></h6>
+        <strong><%= product.price %> €</strong>
+      </div>
+    </div>
+  </div><!-- end inner_product -->
 </div><!-- end product -->

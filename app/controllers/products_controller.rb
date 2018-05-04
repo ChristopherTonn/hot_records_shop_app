@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
       @products = Product.all
     end
 
-    
+
 
   end
 
@@ -26,6 +26,7 @@ end
 
   # GET /products/new
   def new
+
     @product = Product.new
   end
 
@@ -36,6 +37,7 @@ end
   # POST /products
   # POST /products.json
   def create
+    byebug
     @product = Product.new(product_params)
 
     respond_to do |format|

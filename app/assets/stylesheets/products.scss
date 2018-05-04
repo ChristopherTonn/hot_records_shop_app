@@ -2,9 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h6{
-  font-size: 30px;
+  font-size: 20px;
   font-family: Futura, Helvetica, sans-serif;
-  font-weight: lighter;
+  font-weight: 200;
+}
+
+a{
+  color: black;
 }
 
 .inner_product{
@@ -20,7 +24,10 @@ h6{
   transition-duration: 180ms;
   transition-property: box-shadow;
   transition-timing-function: ease-out;
+}
 
+inner_product :hover{
+  box-shadow: none;
 }
 
 .wrapper_product :hover{
@@ -30,17 +37,65 @@ h6{
   // transform: scaleY(4);
 }
 
+.contetn-product-wrapper{
+  box-shadow: none;
+  display: flex;
+}
+
+.contetn-product-wrapper :hover{
+  box-shadow: none;
+}
+
+
 //Products show
+
+h5{
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+}
 .wrapper-product-show{
   width: 100%;
   height: 100%;
   margin: 0 0 0 0;
   position: relative;
-  background-color: rgb(173,216,230);
+
   // color: white;
 
 }
 
+.product-description{
+  font-size: 16px;
+  color: darkgrey;
+}
+
 .img-show{
-  max-width: 500px;
+  max-width: 400px;
+
+  margin: 20px;
+}
+
+.right-card-wrapper{
+  background-color: white;
+  height: 400px;
+  width: 300px;
+
+  padding: 10px;
+
+  border: 0.1px solid lightgrey;
+}
+
+.label{
+  text-transform: uppercase;
+  color: lightgrey;
+  font-weight: normal;
+  font-size: 14px;
+
+
+}
+
+.section{
+  border-bottom: 0.5px solid black;
+  margin: 10px;
 }
