@@ -26,7 +26,7 @@ a{
   transition-timing-function: ease-out;
 }
 
-inner_product :hover{
+.inner_product :hover{
   box-shadow: none;
 }
 
@@ -39,7 +39,8 @@ inner_product :hover{
 
 .contetn-product-wrapper{
   box-shadow: none;
-  display: flex;
+  
+
 }
 
 .contetn-product-wrapper :hover{

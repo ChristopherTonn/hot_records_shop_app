@@ -24,29 +24,37 @@
 
       <!-- Image-->
       <div class="col-md-6">
-        <%= image_tag( @product.image_url, class: "img-responsive img-show") %>
+
+        <% if @product.image_url? %>
+          <%= link_to image_tag(@product.image_url, class: "img-responsive img-show"), @product %>
+        <% else %>
+          <%= image_tag(
+            "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
+            class: "img-responsive"
+          ) %>
+        <% end %>
       </div>
 
       <!-- Right Card-->
       <div class="col-md-3 pull-right">
 
         <div class="right-card-wrapper">
-        <p class="section">
-          <p class="label">Price:</p>
-          <%= @product.price %> €
-        </p>
+          <p class="section">
+            <p class="label">Price:</p>
+            <%= @product.price %> €
+          </p>
 
-        <p class="section">
-          <p class="label">Label:</p>
-          <%= @product.music_label %>
-        </p>
+          <p class="section">
+            <p class="label">Label:</p>
+            <%= @product.music_label %>
+          </p>
 
-        <p class="section">
-          <p class="label">Release Date:</p>
-          <%= @product.release_date %>
-        </p>
+          <p class="section">
+            <p class="label">Release Date:</p>
+            <%= @product.release_date %>
+          </p>
 
-      </div>
+        </div>
       </div>
 
 
@@ -71,14 +79,17 @@
         <%= will_paginate @comments %>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
 
-        <%= link_to 'Edit', edit_product_path(@product) %> |
-        <%= link_to 'Back', products_path %>
+    <% if signed_in? && current_user.admin? %>
+      <div class="row">
+        <div class="col-md-6">
 
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+          <%= link_to 'Back', products_path %>
+
+        </div>
       </div>
-    </div>
+    <% end %>
 
 
 
