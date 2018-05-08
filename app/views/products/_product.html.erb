@@ -2,9 +2,10 @@
   <div class="inner_product ">
     <div class="contetn-product-wrapper ">
       <div class="content-product">
-        <% if product.image_url? %>
+
+        <% begin %>
           <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
-        <% else %>
+        <% rescue => e %>
           <%= image_tag(
             "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
             class: "img-responsive"
