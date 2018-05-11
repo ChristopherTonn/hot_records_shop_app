@@ -11,7 +11,16 @@
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
       <div class="item <%= "active" if product == @products.first %>">
-        <%= link_to image_tag(product.image_url, :class => "img-carousel"), product %>
+        
+
+        <% begin %>
+          <%= link_to image_tag(product.image_url, class: "img-carousel"), product %>
+        <% rescue => e %>
+          <%= image_tag(
+            "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
+            class: "img-responsive"
+          ) %>
+        <% end %>
 
 
         <div class="carousel-caption">

@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   load_and_authorize_resource
 
+  
+
   # GET /users
   # GET /users.json
   def index
