@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe SimplePagesController, type: :controller do
 
-  let(:user) { User.create!(email: "test@gmail.com", password: "123123") }
-  let(:user2) { User.create!(email: "test2@gmail.com", password: "123123") }
+  @user = FactoryBot.create(:user)
 
   describe 'GET #show' do
     context 'when a user is logged in' do
