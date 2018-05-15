@@ -28,7 +28,7 @@ describe SimplePagesController, type: :controller do
     end
 
     it 'cannot access other users show page' do
-      get :show, params: { id: user2.id }
+      get :show, params: { id: user.id }
       expect(response).to have_http_status(302)
       expect(response).to redirect_to(root_path)
     end
