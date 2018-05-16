@@ -4,7 +4,7 @@ FactoryBot.define do
 
   factory :user do
     email
-    password
+    password "123123"
     first_name "Peter"
     last_name "Example"
     admin false
@@ -12,10 +12,10 @@ FactoryBot.define do
 
   factory :admin, class: User do
     email
-    password
-    admin true
+    password "123123"
     first_name "Admin"
     last_name "User"
+    admin true
   end
 
 end
