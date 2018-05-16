@@ -1,10 +1,5 @@
 class ProductsController < ApplicationController
-
-  # TODO HERE IS THE LINE 
-  # before_action :display_error , only: [ :edit, :update, :destroy], if: -> { byebug; current_user && currrent_user.admin? }
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
-
 
   # GET /products
   # GET /products.json
@@ -22,8 +17,6 @@ class ProductsController < ApplicationController
   end
 
 
-
-
   # GET /products/1
   # GET /products/1.json
   def show
@@ -39,13 +32,12 @@ end
 
   # GET /products/1/edit
   def edit
-
   end
 
   # POST /products
   # POST /products.json
   def create
-
+    byebug
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -83,14 +75,7 @@ end
     end
   end
 
-
-
   private
-
-  def display_error
-    redirect_to root_path
-  end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
