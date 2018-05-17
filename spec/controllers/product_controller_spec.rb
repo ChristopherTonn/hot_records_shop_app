@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ProductsController, focus: true, type: :controller do
   before do
-    @user = FactoryBot.create(:user, :admin)
+    @user = FactoryBot.create(:admin)
     sign_in @user
     @product = FactoryBot.create(:product, name: "Test Product", description: "Test product", price: 6.33)
   end
