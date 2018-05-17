@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
       end
 
     rescue Stripe::CardError => e
-      
+
       body = e.json_body
       err = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
@@ -32,5 +32,4 @@ class PaymentsController < ApplicationController
 
     redirect_to product_path(product)
   end
-end
 end
