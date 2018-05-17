@@ -20,9 +20,10 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-  @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 2)
+    byebug
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 2)
 
-end
+  end
 
   # GET /products/new
   def new
@@ -37,7 +38,7 @@ end
   # POST /products
   # POST /products.json
   def create
-    byebug
+
     @product = Product.new(product_params)
 
     respond_to do |format|
