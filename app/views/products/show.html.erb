@@ -26,7 +26,13 @@
       <div class="col-md-6">
 
         <% begin %>
-          <%= link_to image_tag(@product.image_url, class: "img-responsive img-show"), @product %>
+          <%= image_tag(
+            @product.image_url,
+            class: "img-responsive img-show",
+            id: "zoom_07",
+            data_zoom_image: "@product.image_url"
+          )%>
+          
         <% rescue => e %>
           <%= image_tag(
             "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
