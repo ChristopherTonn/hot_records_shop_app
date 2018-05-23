@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+function refreshRating() {
   // Rating
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
@@ -7,7 +7,7 @@ $(document).on('turbolinks:load', function(){
     scoreName: 'comment[rating]'
   });
 
-  // Show rating 
+  // Show rating
   $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -17,4 +17,9 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+}
+
+$(document).on('turbolinks:load ajaxSuccess', function(){
+
+  refreshRating();
 });
