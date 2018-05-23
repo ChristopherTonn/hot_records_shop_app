@@ -32,7 +32,7 @@
             id: "zoom_07",
             data_zoom_image: "@product.image_url"
           )%>
-          
+
         <% rescue => e %>
           <%= image_tag(
             "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
@@ -62,7 +62,8 @@
 
           <!-- Payment Button -->
           <%= form_with(url: '/payments/create') do |form| %>
-          <%= render partial: "shared/stripe_checkout_button" %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
           <% end %>
 
         </div>

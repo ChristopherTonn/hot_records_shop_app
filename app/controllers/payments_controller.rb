@@ -1,9 +1,13 @@
 class PaymentsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def create
-    token = params[:stripeToken]
+
     @user = current_user
     @product = Product.find(params[:product_id])
+
+    token = params[:stripeToken]
 
     begin
       charge = Stripe::Charge.create(
@@ -15,11 +19,11 @@ class PaymentsController < ApplicationController
 
       if charge.paid
         Order.create(
-          user_id = @user.id,
-          product_id = @product.id,
-          total: @product.price
+          user_id: @user.id,
+          product_id: @product.id,
+          total: @product.price.to_i
         )
-        UserMailer.order_placed(@user, @product).deliver_now
+        # UserMailer.order_placed(@user.id, @product.id).deliver_now
 
         flash[:success] = "Your payment was processed successfully"
       end
@@ -31,6 +35,6 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
 
-    redirect_to product_path(product)
+    redirect_to product_path(@product)
   end
 end
