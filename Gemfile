@@ -71,3 +71,5 @@ gem 'will_paginate', '~> 3.1.1'
 gem 'stripe'
 
 gem 'brakeman'
+
+gem 'dalli'
