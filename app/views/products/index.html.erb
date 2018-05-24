@@ -11,10 +11,10 @@
 
 
       <% @products.each do |product| %>
-
-      <!-- render product from _product.html.erb  -->
-      <%= render product %>
-
+        <% cache(cache_key_for_products) do %>
+          <!-- render product from _product.html.erb  -->
+          <%= render product %>
+        <% end %>
       <% end %>
 
     </div>
