@@ -10,12 +10,12 @@
       <h1>Products</h1>
 
 
-      <% @products.each do |product| %>
+
         <% cache(cache_key_for_products) do %>
           <!-- render product from _product.html.erb  -->
-          <%= render product %>
+          <%= render @products %>
         <% end %>
-      <% end %>
+
 
     </div>
   </div><!-- end row -->
