@@ -1,0 +1,383 @@
+/* line 4, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+h6 {
+  font-size: 20px;
+  font-family: Futura, Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+/* line 10, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+a {
+  color: black;
+}
+
+/* line 14, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.inner_product {
+  margin: 2px 2px 2px 2px;
+  padding: 45px;
+  background-color: white;
+  border-width: .1px;
+  border-color: rgba(59, 68, 81, 0.1);
+  border-style: solid;
+  transition-duration: 180ms;
+  transition-property: box-shadow;
+  transition-timing-function: ease-out;
+}
+
+/* line 29, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.inner_product :hover {
+  box-shadow: none;
+}
+
+/* line 33, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.wrapper_product :hover {
+  background-color: white;
+  box-shadow: 0 2px 33px 4px rgba(59, 68, 81, 0.15);
+}
+
+/* line 40, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.contetn-product-wrapper {
+  box-shadow: none;
+}
+
+/* line 46, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.contetn-product-wrapper :hover {
+  box-shadow: none;
+}
+
+/* line 53, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+h5 {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+}
+
+/* line 59, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.wrapper-product-show {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0;
+  position: relative;
+}
+
+/* line 69, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.product-description {
+  font-size: 16px;
+  color: darkgrey;
+}
+
+/* line 74, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.img-show {
+  max-width: 400px;
+  margin: 20px;
+}
+
+/* line 80, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.right-card-wrapper {
+  background-color: white;
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+  border: 0.1px solid lightgrey;
+}
+
+/* line 90, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.label {
+  text-transform: uppercase;
+  color: lightgrey;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 99, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/products.scss */
+.section {
+  border-bottom: 0.5px solid black;
+  margin: 10px;
+}
+/* line 4, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+h1 {
+  font-size: 60px;
+  color: salmon;
+  font-family: Futura, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 12, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+body {
+  background-color: #fcfcfc;
+  position: relative;
+  padding-top: 70px;
+}
+
+/**** Navigation Bar ****/
+/* line 20, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.navbar {
+  background-color: white;
+}
+
+/* line 25, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.nav li a {
+  font-family: Futura, Helvetica, Verdana sans-serif;
+  color: black;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  text-decoration: none;
+}
+
+/* line 37, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.hmb {
+  background-color: black;
+}
+
+/* line 41, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.btn {
+  background-color: white;
+}
+
+/**** Carousel ****/
+/* line 46, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.carousel {
+  height: 350px;
+  margin-top: -15px;
+}
+
+/* line 52, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.img-carousel {
+  height: 30px;
+  width: 300px;
+  margin-top: 1.563em;
+  margin-left: 11.875em;
+}
+
+/* line 60, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.carousel-caption {
+  margin-bottom: 5.000em;
+  margin-left: 400px;
+  width: 20%;
+  background-color: black;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* line 73, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.carousel-caption p {
+  color: white;
+}
+
+/**** Product ****/
+/* line 83, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  color: lightgrey;
+  font-family: Futura, Helvetica, sans-serif;
+  font-weight: 50;
+}
+
+/* line 96, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.footer p {
+  position: relative;
+  margin-top: 20px;
+}
+
+/**** Contact ****/
+/* line 103, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/simple_pages.scss */
+.headline {
+  font-family: Futura, Helvetica, sans-serif;
+  font-size: 60px;
+  color: black;
+  text-transform: capitalize;
+}
+/* line 5, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* line 13, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.sign-up-card {
+  width: 32.813em;
+}
+
+/* line 18, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.headline-sign-up {
+  font-family: Bodoni, Garamound, Georgia, serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2.8px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+/* line 28, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.field-line {
+  float: inherit;
+}
+
+/* line 33, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.field-label {
+  margin-right: 10px;
+  width: 130px;
+  text-align: left;
+  font-family: Futura, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* line 44, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.field-input {
+  width: 220px;
+  background-color: inherit;
+  border-style: none;
+  border-bottom: 1px solid black;
+}
+
+/* line 52, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.sign-up-btn {
+  margin-top: 25px;
+  margin-left: 15px;
+  height: 30px;
+  width: 135px;
+  transition-duration: 180ms;
+  transition-property: background-color, color;
+  transition-timing-function: ease-out;
+}
+
+/* line 63, /Users/ChristopherTonn/Desktop/CF/Ruby/my_first_app/app/assets/stylesheets/users.scss */
+.sign-up-btn:hover {
+  background-color: darkgrey;
+  border-color: darkgrey;
+  color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+body{
+  margin-bottom: 55px;
+}
+
+
+.search-wrapper{
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+
+  width: 500px;
+
+  font-family: Futura, Helvetica, Verdana sans-serif;
+}
+
+ .search-field{
+
+   position: relative;
+   margin: 0px 5px 0px 10px;
+   height: 30px;
+   width: calc(100% - 65px);
+ }
+
+.submit-search-btn{
+  position: relative;
+  margin-right: 5px;
+  float: right;
+  height: 30px;
+  width: 50px;
+}
+
+.roundish-style{
+  border-radius: 80px;
+  border-width: .5px;
+  border-color: black;
+
+  background-color: white;
+}
+
+.submit-mail-btn{
+  height: 40px;
+  width: 130px;
+}
+
+.thank-you-text{
+  color: green;
+  font-size: 15px;
+  font-family: Futura, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.alert-wrapper{
+  color: green;
+
+
+}
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
