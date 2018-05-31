@@ -16,24 +16,24 @@
 
 <div class="field">
   <%= form.label :name %>
-  <%= form.text_field :name, id: :product_name, class: "field-input" %>
+  <%= form.text_field :name, id: :product_name, class: "field-input", :required => true %>
 </div>
 
 <div class="field">
   <%= form.label :description %>
-  <%= form.text_area :description, id: :product_description, class: "field-input" %>
+  <%= form.text_area :description, id: :product_description, class: "field-input", :required => true %>
 </div>
 
 <div class="field">
   <%= form.label :image_url %>
-  <%= form.text_field :image_url, id: :product_image_url, class: "field-input" %>
+  <%= form.text_field :image_url, id: :product_image_url, class: "field-input", :required => true %>
 </div>
 
 
 
 <div class="field">
   <%= form.label :price %>
-  <%= form.text_field :price, id: :product_price, class: "field-input" %>
+  <%= form.text_field :price, id: :product_price, class: "field-input", :required => true %>
 </div>
 
 <div class="field">
