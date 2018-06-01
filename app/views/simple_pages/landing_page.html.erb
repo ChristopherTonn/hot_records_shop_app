@@ -11,7 +11,7 @@
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
       <div class="item <%= "active" if product == @products.first %>">
-        
+
 
         <% begin %>
           <%= link_to image_tag(product.image_url, class: "img-carousel"), product %>
@@ -31,5 +31,73 @@
       <% end %>
   </div>
 
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- **** **** **** ****  -->
+      <!--   Newest Entry -->
+      <!-- **** **** **** ****  -->
+      <div class="col-md-6 pull-left front-page-content-box">
+        <p class="front-page-content-box-headline">Newest Entry<p>
+
+
+            <% @product = Product.order("created_at").last %>
+
+            <% begin %>
+              <%= link_to image_tag(@product.image_url, class: "img-responsive pull-right front-page-content-box-img"), @product %>
+            <% rescue => e %>
+              <%= image_tag(
+                "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
+                class: "img-responsive"
+              ) %>
+            <% end %>
+
+            <p class="front-page-content-box-txt"><%= link_to @product.name, @product %></p>
+            <p class="front-page-content-box-txt"><%= @product.price %></p>
+
+      </div><!-- end content box -->
+
+      <!-- **** **** **** ****  -->
+      <!--   Newest Charts -->
+      <!-- **** **** **** ****  -->
+      <div class="col-md-6 pull-right front-page-content-box">
+        <p class="front-page-content-box-headline">Charts<p>
+
+
+            <% @product = Product.order("created_at").first %>
+
+            <% begin %>
+              <%= link_to image_tag(@product.image_url, class: "img-responsive pull-right front-page-content-box-img"), @product %>
+            <% rescue => e %>
+              <%= image_tag(
+                "the-mauskovic-dance-band-down-in-the-basement-crop-c0-5__0-5-600x600-70.jpg",
+                class: "img-responsive"
+              ) %>
+            <% end %>
+
+            <p class="front-page-content-box-headline front-page-content-box-txt"><%= link_to @product.name, @product %></p>
+
+
+      </div><!-- end content box -->
+    </div><!-- end row -->
+
+    <!-- **** **** **** ****  -->
+    <!--   This week section -->
+    <!-- **** **** **** ****  -->
+    <div class="row">
+      <div class="col-sm-12 week-section-wrapper">
+
+        <h5>This Week New</h5>
+
+          <% cache(cache_key_for_products) do %>
+            <!-- render product from _product.html.erb  -->
+            <%= render @products = Product.order("created_at").reverse %>
+          <% end %>
+
+      </div>
+    </div><!-- end row -->
+  </div><!-- end container -->
 
 </div>

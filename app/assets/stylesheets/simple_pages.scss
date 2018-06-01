@@ -41,6 +41,11 @@ body{
 .btn{
   background-color: white;
 }
+/**** Landing Page ****/
+body{
+  background-image: url("background.jpg");
+  
+}
 
 /**** Carousel ****/
 .carousel{
@@ -64,18 +69,65 @@ body{
   width: 20%;
   background-color: black;
 
-  font-family: Georgia, serif;
+
+  font-family: 'Playfair Display', serif;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-.carousel-caption p{
+#carousel-link a{
   color: white;
+}
+
+/**** Front Page Content Box ****/
+.front-page-content-box{
+  position: relative;
+  background-color: lightgrey;
+
+  height: 300px;
+  width: 45%;
+
+  margin: 15px;
+  margin-top: 100px;
 }
 
 
 
+.front-page-content-box-img{
+  position: relative;
+
+  height: 45%;
+  width: 45%;
+
+  margin: 5px;
+}
+
+.front-page-content-box-headline{
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+
+  margin-top: 8px;
+}
+
+.front-page-content-box-txt, .front-page-content-box-txt a{
+
+  font-size: 18px;
+  font-family: Futura, Helvetica, Verdana sans-serif;
+
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+}
+
+/**** Front Page Week Section ****/
+
+.week-section-wrapper{
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
 
 /**** Product ****/
 
