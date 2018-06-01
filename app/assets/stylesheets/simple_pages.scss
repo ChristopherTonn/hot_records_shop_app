@@ -41,11 +41,7 @@ body{
 .btn{
   background-color: white;
 }
-/**** Landing Page ****/
-body{
-  background-image: url("background.jpg");
-  
-}
+
 
 /**** Carousel ****/
 .carousel{
@@ -57,6 +53,7 @@ body{
 .img-carousel{
   height: 30px;
   width: 300px;
+
 
   margin-top: 1.563em;
   margin-left: 11.875em;
@@ -77,7 +74,9 @@ body{
 }
 
 #carousel-link a{
+
   color: white;
+  
 }
 
 /**** Front Page Content Box ****/
