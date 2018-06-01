@@ -5,10 +5,12 @@ h6{
   font-size: 20px;
   font-family: Futura, Helvetica, sans-serif;
   font-weight: 200;
+
 }
 
 a{
   color: black;
+  max-height: 44px;
 }
 
 .inner_product{
@@ -24,10 +26,16 @@ a{
   transition-duration: 180ms;
   transition-property: box-shadow;
   transition-timing-function: ease-out;
+
+  max-height: 412px;
 }
 
 .inner_product :hover{
   box-shadow: none;
+}
+
+.wrapper_product{
+
 }
 
 .wrapper_product :hover{
@@ -39,7 +47,7 @@ a{
 
 .contetn-product-wrapper{
   box-shadow: none;
-  
+
 
 }
 
