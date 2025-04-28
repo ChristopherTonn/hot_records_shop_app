@@ -1,42 +1,52 @@
-# README
+# 🎶 Hot Records Shop – An Online Store for Vinyl Lovers
 
-Hot Records - A Online Shop
+## ✨ Features
 
-Features:
-  
-    • Du kannst in verschiedenen Kategorien wie: "New in Stock", "Newest Entry", "This Week New" & allen Produkten browsen.
+- 🔎 Browse products across categories like **New in Stock**, **Newest Entry**, **This Week New**, and **All Products**.
+- ⚡ Products are dynamically loaded via **AJAX** and cached for faster navigation.
+- 🔐 Users can **sign up, log in, and manage their accounts**.
+- ⭐ Logged-in users can **leave reviews and ratings** on product pages, contributing to the product's average score.
+- 🔄 **Comments and ratings update live** using **ActionCable** (real-time WebSocket updates).
+- 💳 Users can **purchase products securely using Stripe Checkout**.
+- 🛠️ **Admins** can **create and edit products**, **manage users**, and **delete inappropriate comments**.
 
-    • Die Produkte werden mit Ajax geladen und in einem Cache gespeichert.
+---
 
-    • Du kannst dich Authentisieren und einen User Account anlegen.
+## 🛠 Tech Stack
 
-    • Diesen User Account kannst du Editieren.
+- 🛤 **Ruby on Rails 5.1.5**
+- 🎨 **Bootstrap 4**
+- 🔗 **jQuery**
+- 🎨 **CSS3**
+- 🧱 **HTML5**
+- ⭐ **raty.js** (star rating system)
 
-    • Wenn du eingeloggt bist kannst du auf der Seite eines Produktes ein dazugehöriges Kommentar mit Bewertung abgeben.             Dieses ist dann für alle in dem Shop sichtbar. Die Bewertung fließt in eine Durchschnittliche Bewertung für das 
-      Produkt ein.
+---
 
-    • Die Kommentare werden durch ActoinCable in echtzeit geupdatet und sind sofort für alle sichtbar.
+## 📦 Gems Used
 
-    • Du kannst ein Produkt via Stripe kaufen.
+- [`devise`](https://github.com/heartcombo/devise) – 🔒 User Authentication
+- [`cancancan`](https://github.com/CanCanCommunity/cancancan) – 🛡️ Authorization
+- [`stripe`](https://github.com/stripe/stripe-ruby) – 💳 Payment Integration
+- [`will_paginate`](https://github.com/mislav/will_paginate) – 📄 Pagination
 
-    • Der Admin kann neue Produkte erstellen & Editieren. Außerdem kann er User & Kommentare löschen.
+---
 
-  
-  Usage:
-  
-    - Ruby 
-    - Rails 
-    - Bootstrap 
-    - jQuery
-    - CSS 3
-    - HTML 5
-    - raty 
+## 🚀 Deployment Notes
 
-  Extra gems:
+- 🌍 The server is **live and running** on **Render**.
+- ⚙️ Due to **legacy Ruby 2.3** and **Rails 5.1** dependencies, **database seeding** on the production server could not be fully completed within the time constraint.
+- 🔧 All application logic, routes, controllers, models, and views are fully operational.
+- 📂 Codebase is ready for local setup and review.
 
-    - devise 
-    - cancancan 
-    - stripe
-    - will_paginate
+---
 
-  
+## 🖥️ Local Setup Instructions
+
+```bash
+git clone https://github.com/ChristopherTonn/hot_records_shop_app.git
+cd hot_records_shop_app
+bundle install
+rails db:setup
+rails server
+```
