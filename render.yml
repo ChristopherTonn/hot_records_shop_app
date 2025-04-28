@@ -4,6 +4,9 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
+    envVars:
+      - key: RAILS_ENV
+        value: production
 
 databases:
   - name: hot-records-shop-db
