@@ -1,5 +1,5 @@
 # Alpine image that still hosts Ruby 2.3 packages
-FROM ruby:2.3-alpine3.8   # if this tag ever 404s, try ruby:2.3-alpine
+FROM ruby:2.3-alpine3.8 
 
 # ---- system libraries -------------------------------------------------
 RUN apk add --no-cache build-base postgresql-dev nodejs yarn tzdata
