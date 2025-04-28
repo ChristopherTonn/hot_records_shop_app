@@ -1,12 +1,17 @@
+# Alpine image that still hosts Ruby 2.3 packages
+FROM ruby:2.3-alpine3.8   # if this tag ever 404s, try ruby:2.3-alpine
 
-    FROM ghcr.io/railsdock/ruby:2.3-bullseye
-    # Everything you need (build-essentials, libpq-dev, node) is pre-installed.
-    
-    WORKDIR /app
-    COPY Gemfile* ./
-    RUN gem install bundler -v '~>1.17' \
-     && bundle install --without development test
-    
-    COPY . .
-    CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
-    
+# ---- system libraries -------------------------------------------------
+RUN apk add --no-cache build-base postgresql-dev nodejs yarn tzdata
+
+# ---- Ruby / Bundler ---------------------------------------------------
+RUN gem install bundler -v '~>1.17'
+
+# ---- app setup --------------------------------------------------------
+WORKDIR /app
+COPY Gemfile* ./
+RUN bundle install --without development test
+COPY . .
+
+# ---- start server -----------------------------------------------------
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
