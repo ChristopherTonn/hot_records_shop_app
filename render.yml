@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hot-records-shop
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+
+databases:
+  - name: hot-records-shop-db
+    plan: free
