@@ -4,14 +4,16 @@ default: &default
   pool: 5
 
 development:
-  adapter: sqlite3
+  <<: *default
   database: db/development.sqlite3
+  adapter: sqlite3
   pool: 5
   timeout: 5000
 
 test:
-  adapter: sqlite3
+  <<: *default
   database: db/test.sqlite3
+  adapter: sqlite3
   pool: 5
   timeout: 5000
 
