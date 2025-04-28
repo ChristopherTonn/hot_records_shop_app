@@ -13,5 +13,9 @@ COPY Gemfile* ./
 RUN bundle install --without development test
 COPY . .
 
+# ---- add entrypoint ---------------------------------------------------
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 # ---- start server -----------------------------------------------------
-CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
+CMD ["/entrypoint.sh"]
