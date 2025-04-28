@@ -1,7 +1,7 @@
-FROM ruby:2.3.5-slim
+FROM ruby:2.3.5
 
 RUN apt-get update -qq && \
-    apt-get install -y --no-install-recommends build-essential nodejs && \
+    apt-get install -y --no-install-recommends build-essential libpq-dev && \
     gem install bundler -v '~>1.17'
 
 WORKDIR /app
